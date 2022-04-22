@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/scoreboard.css'%}">
+<link rel="stylesheet" href="{% static 'css/scoreboard_style.css'%}">
+<script src="{% static 'scripts/scoreboard.js' %}"></script>
+
+<div>
+
+<img alt="videoFeed" height="420px" style="float: left;padding-left: 80px" src="{% url 'livecam_feed' %}">
+ 
+ <img alt="videoFeed" height="420px" style="float: left;padding-left: 50px" src="{% url 'livecam_feed2' %}">
+
+ <img alt="videoFeed" height="420px" style="padding-left: 50px;" src="{% url 'livecam_feed3' %}">
+
+</div>
+
+<br>
+<br>
+
+
+<!-- 
+<div>
+ <div class="grid-container">
+  <div id="currentTeam" class="item1">Team</div>
+  <div class="item2" id="batsman1">Batsman 1</div>
+  <div class="item3" id="batsman2">Batsman 2</div>
+  <div class="item4"><span id="b1score">0</span> (<span id="b1balls">0</span>)</div>
+  <div class="item5"><span id="b2score">0</span> (<span id="b2balls">0</span>)</div>
+  <div class="item6">CS vs EE</div>
+  <div class="item7"> <span id="wickets">0</span> / <span id="runs">0</span> </div>
+  <div class="item8">Req Run Rate 7</div>
+  <div class="item9" id="overs">0</div>
+  <div class="item10">6</div>
+  <div class="item11">0</div>
+  <div class="item12">3</div>
+  <div class="item13">1</div>
+  <div class="item14">1</div>
+  <div class="item15">4</div>
+</div>
+</div>
+-->
+
+<div id="container">
+  <div class="left-board">
+    <div class="batsman">
+      <p>
+        <span id="batsman1">Batsman 1</span>
+        <span>*</span>
+        <span id="b1score">0</span>
+        <span id="b1balls">0</span>
+        <br>
+        <span id="batsman2">Batsman 2</span>
+        <span>*</span>
+        <span id="b2score">0</span>
+        <span id="b2balls">0</span>
+      </p>
+    </div>
+  </div>
+  <div class="middle-board">
+    <h1>
+      <span id="team1">Team 1</span>
+       v 
+       <span id="team2">Team 2</span> 
+       <br><br><br><br><br><br><br><br><br>
+         <span id="battingScore">0</span>
+         -
+         <span id="battingWickets">0</span>
+     </h1>
+  </div>
+  <div class="right-board">
+    <div class="baller">
+      <p>
+        <span>
+          Bowler
+        </span>
+        <br>
+        <span>
+          Overs:
+        </spna>
+
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <button onclick="incrementScore()">Increment Score</button>
+  <button onclick="decrementScore()">Decrement Score</button>
+  <button onclick="incrementWicket()">Wicket +1</button>
+  <button onclick="decrementWicket()">Wicket -1</button>
+  <br>
+  <button onclick="battingTeam()">Update Batting Team</button>
+  <input type="text" id="battingTeam" value="">
+  <br>
+  <button onclick="bat1()">Update Batsman 1</button>
+  <input type="text" id="bat1" value="">
+  <br>
+  <button onclick="bat2()">Update Batsman 2</button>
+  <input type="text" id="bat2" value="">
+  <br>
+  <button onclick="incrementB1Score()">Increment B1 Score</button>
+  <button onclick="incrementB1Balls()">Increment B1 Balls</button>
+
+  <button onclick="incrementB2Score()">Increment B2 Score</button>
+  <button onclick="incrementB2Balls()">Increment B2 Balls</button>
+  <button onclick="incrementOvers()">Overs +1</button>
+   <button>Record</button>
+  <button>Stop</button>
+</div>
+
+ 
+{% endblock %}
