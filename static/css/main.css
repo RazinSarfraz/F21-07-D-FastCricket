@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+body {
+  /* background: #6c2e62; */
+  height: 100vh;
+  margin: 0;
+
+
+}
+
+.gradient-background {
+  background: linear-gradient(100deg,#5ba960,#59cdc6,#bcd45e);
+  background-size: 180% 180%;
+  animation: gradient-animation 9s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

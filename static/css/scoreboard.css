@@ -1,0 +1,114 @@
+.item1 { grid-area: team; }
+.item2 { grid-area: batsman1; }
+.item3 { grid-area: batsman2; }
+.item4 { grid-area: score1; }
+.item5 { grid-area: score2; }
+.item6 { grid-area: opponents;}
+.item7 { grid-area: wick;}
+.item8 { grid-area: rr;}
+.item9 { grid-area: over;}
+.item10 { grid-area: ball1;}
+.item11 { grid-area: ball2;}
+.item12 { grid-area: ball3;}
+.item13 { grid-area: ball4;}
+.item14 { grid-area: ball5;}
+.item15 { grid-area: ball6;}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'team batsman1 score1 opponents opponents wick over over over over over over'
+    'team batsman2 score2 rr rr rr ball1 ball2 ball3 ball4 ball5 ball6';
+  grid-gap: 2px;
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(72, 109, 233, 0.814);
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+#container{
+
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background:linear-gradient(#eff1f0,#c1c2c4,#a1a4a7);
+  margin-top: 600px;
+}
+.left-board{
+  float: left;
+  width: 30%;
+  height: 96px;
+  background:linear-gradient(#eff1f0,#c1c2c4,#a1a4a7);
+  border-top-right-radius: 100%;
+  border-top: 4px solid #FF9816;
+}
+.middle-board{
+  float: left;
+  width: 25%;
+  height: 96px;
+  background: #1e216f;
+  font-weight: bold;
+	color: #fff;
+	font-size: 22px;
+  text-align: top;
+  margin-bottom: 7%;
+  margin-left: 7.5%;
+  border-radius: 50px;
+  
+  border-top: 4px solid #FF9816;
+  overflow: hidden;
+}
+.right-board{
+  float: right;
+  width: 30%;
+  height: 96px;
+  background:linear-gradient(#eff1f0,#c1c2c4,#a1a4a7);
+  border-top-left-radius: 100%;
+  border-top: 4px solid #FF9816;
+}
+.middle-board h1{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Roboto',sans-serif;
+  margin-top: 50px;
+  line-height: 0.1 ;
+}
+.middle-board p{
+  font-family: 'Anton',sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+.batsman{
+  font-family: 'Anton',sans-serif;
+  font-weight: 700;
+  line-height: 2;
+  margin-left: 20px;
+}
+span{
+  font-size: 13px;
+}.baller{
+  font-family: 'Anton',sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  float: right;
+  margin-right: 20px;
+  line-height: 2;
+}
+
+@keyframes slide{
+  0%{margin-left: 0%;}
+  50%{margin-left:70%;}
+}
